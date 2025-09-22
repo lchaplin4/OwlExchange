@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Ensures proper text encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile -->
+    <title>OwlExchange - Signup</title> <!-- Title shown in browser tab -->
+    <style>
+        /* Page body styling */
+        body {
+            font-family: Arial, sans-serif; /* Sets readable font */
+            padding: 20px; /* Space around the content */
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        /* Form styling */
+        form {
+            max-width: 400px; /* Limits form width */
+            margin: 0 auto; /* Centers form horizontally */
+            background-color: #fff; /* White background for contrast */
+            padding: 20px; /* Inner spacing */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Label styling */
+        label {
+            display: block; /* Each label on its own line */
+            margin-top: 10px; /* Space above label */
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%; /* Full width of form */
+            padding: 8px; /* Inner spacing for easier typing */
+            margin-top: 5px; /* Space between label and input */
+        }
+
+        /* Radio button group styling */
+        .radio-group {
+            margin-top: 10px; /* Space above the group */
+        }
+
+        /* Radio button spacing */
+        .radio-group input {
+            margin-right: 5px; /* Small space between button and text */
+        }
+
+        /* Submit button styling */
+        button {
+            margin-top: 15px; /* Space above button */
+            padding: 10px; /* Button size */
+            width: 100%; /* Full width */
+            cursor: pointer; /* Changes cursor to hand on hover */
+        }
+
+        /* Error message styling */
+        .error {
+            color: red; /* Red text for errors */
+            margin-top: 10px; /* Space above message */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main heading -->
+    <h1>Sign Up</h1>
+
+    <!-- Signup form -->
+    <form method="POST" action="/signup" onsubmit="return validatePasswords()"> <!-- Validate passwords before submitting -->
+
+        <!-- First Name input -->
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <!-- Last Name input -->
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <!-- Username input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <!-- Email input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Password input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Confirm Password input -->
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <!-- Password mismatch error message -->
+        <div id="passwordError" class="error" style="display:none;">Passwords do not match!</div>
+
+        <!-- Role selection using radio buttons -->
+        <div class="radio-group">
+            <label>Role:</label>
+            <div>
+                Buyer <input type="radio" name="role" value="Buyer" required>
+            </div>
+            <div>
+                Seller <input type="radio" name="role" value="Seller" required>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <!-- Link back to homepage -->
+    <a href="/">Go Home</a>
+
+    <!-- JavaScript for validating password match -->
+    <script>
+        function validatePasswords() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm_password").value;
+            const errorDiv = document.getElementById("passwordError");
+
+            if (password !== confirmPassword) {
+                errorDiv.style.display = "block"; // Show error message
+                return false; // Prevent form submission
+            } else {
+                errorDiv.style.display = "none"; // Hide error message if passwords match
+                return true; // Allow form submission
+            }
+        }
+    </script>
+
+</body>
+</html>
