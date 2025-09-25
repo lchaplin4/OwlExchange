@@ -35,8 +35,8 @@
 
                 <!-- Navigation bar -->
                 <nav class="nav">
-                    <a href="index.html" class="nav-link active">Home</a> <!-- Active page -->
-                    <a href="Browse.html" class="nav-link active">Browse</a> <!-- Active page -->
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="Browse.html" class="nav-link">Browse</a>
                     <a href="Sell.html" class="nav-link">Sell</a>
                     <a href="Exchange.html" class="nav-link">Exchange</a>
                     <a href="Donate.html" class="nav-link">Donate</a>
@@ -51,17 +51,11 @@
                     </div>
                 </div>
 
-                <!-- Header action buttons -->
-                <div class="header-actions">
-                    <button class="btn-primary list-item-btn">
-                        <i data-lucide="plus"></i>
-                        <span>List Item</span>
-                    </button>
-                    <a href="sign-in-sign-up.html" class="btn btn-icon">
-                        <i data-lucide="user"></i>
-                        <span>Sign In or Sign Up</span>
-                    </a>
-                </div>
+                <!-- Header action button -->
+                <a href="sign-in-sign-up.html" class="btn btn-icon">
+                    <i data-lucide="user"></i>
+                    <span>Sign In or Sign Up</span>
+                </a>
             </div>
         </div>
     </header>
@@ -71,7 +65,7 @@
         <!-- Hero Section: First impression, call to action -->
         <section class="hero">
             <div class="hero-bg">
-                <img src="KSU_IMAGE_1.jpg" class="hero-image" alt="Campus marketplace">
+                <img src="KSU_IMAGE_1.jpg" class="hero-image" alt="Three KSU students posing for a picture">
                 <div class="hero-overlay"></div> <!-- Semi-transparent overlay -->
             </div>
             <div class="container hero-container">
@@ -81,47 +75,107 @@
                     <p class="hero-description">
                         OwlExchange is the premier student marketplace for buying, selling, exchanging, and donating items within campus communities.
                     </p>
+                    <!-- Start Browsing & Learn More Buttons -->
                     <div class="hero-actions">
-                        <button class="btn-hero-primary">Start Browsing <i data-lucide="search"></i></button>
-                        <button class="btn-hero-secondary">Learn More</button>
+                        <a href="Browse.html" class="btn-hero-primary">
+                            Start Browsing <i data-lucide="search"></i>
+                        </a>
+                        <a href="About.html" class="btn-hero-secondary">Learn More</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Featured Categories Section -->
-        <section class="categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Browse Popular Categories</h2>
-                    <p>Quick access to frequently sought items</p>
-                </div>
-                <div class="categories-grid">
-                    <!-- Example category card -->
-                    <div class="category-card">
-                        <img src="textbooks.jpg" alt="Textbooks" class="category-image">
-                        <div class="category-overlay"></div>
-                        <div class="category-content">
-                            <h3>Textbooks</h3>
-                            <p>Affordable textbooks for every course</p>
-                        </div>
-                    </div>
-                    <!-- Add more category cards here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Listings Section -->
-        <section class="listings">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Listings</h2>
-                    <p>Recently added items from students</p>
-                </div>
-                <div class="listings-grid" id="featuredListings"></div>
             </div>
         </section>
     </main>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-green">
+                        <i data-lucide="recycle"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sustainable Living</h3>
+                        <p>Reduce waste and save money</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-blue">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Student Community</h3>
+                        <p>Connect with fellow students</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-purple">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Campus Pickup</h3>
+                        <p>Meet safely on campus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse Categories</h2>
+                <p>Find exactly what you need for student life</p>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section class="featured-listings">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Listings</h2>
+                <p>Fresh items from your campus community</p>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+
+            <div class="section-footer">
+                <button class="btn btn-outline btn-large">
+                    View All Listings <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join OwlExchange?</h2>
+                <p>
+                    Start saving money and helping the environment. List your first item or browse what your fellow
+                    students are offering.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large">
+                        List Your First Item
+                    </button>
+                    <button class="btn btn-outline btn-large btn-white">
+                        Browse Items
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer: Contains site links and legal info -->
     <footer class="footer">
@@ -154,31 +208,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="scripts/main.js"></script>
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
-
-        // Load featured listings dynamically
-        document.addEventListener('DOMContentLoaded', function() {
-            loadFeaturedListings();
-        });
-
-        function loadFeaturedListings() {
-            const listings = [
-                { name: "Graphing Calculator TI-84", image: "calculator.jpg", price: "$Free" },
-                { name: "Dorm Room Chair", image: "chair.jpg", price: "$25" }
-            ];
-            const container = document.getElementById('featuredListings');
-            container.innerHTML = listings.map(item => `
-                <div class="product-card">
-                    <img src="${item.image}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>${item.price}</p>
-                </div>
-            `).join('');
-            lucide.createIcons();
-        }
     </script>
 </body>
 </html>

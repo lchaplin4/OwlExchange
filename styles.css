@@ -1,4 +1,3 @@
-
 /* CSS Variables */
 :root {
   --font-size: 16px;
@@ -131,25 +130,23 @@ p {
   color: var(--foreground);
 }
 
-
-
 .btn-icon {
-    background: transparent;
-    border: none;
-    padding: 0.75rem;
-    border-radius: var(--radius);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--muted-foreground);
+  background: transparent;
+  border: none;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--muted-foreground);
 }
 
 .btn-icon:hover {
-    background: var(--accent);
-    color: var(--foreground);
-    transform: scale(1.05);
+  background: var(--accent);
+  color: var(--foreground);
+  transform: scale(1.05);
 }
 
 .btn-small {
@@ -205,33 +202,32 @@ p {
 
 .nav-link {
   text-decoration: none;
-    color: var(--foreground);
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
-
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 50%;
-    background: var(--primary);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background: var(--primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
 }
 
 .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .search-container {
@@ -607,15 +603,16 @@ p {
   margin-bottom: 0.5rem;
 }
 
+/* ✅ Updated quick links color */
 .footer-links a {
-  color: var(--primary-foreground);
+  color: #000000; /* black */
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
   font-size: 0.875rem;
 }
 
 .footer-links a:hover {
-  opacity: 0.8;
+  color: #333; /* dark gray on hover */
 }
 
 .newsletter-form {

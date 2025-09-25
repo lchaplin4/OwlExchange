@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for character encoding and responsive design -->
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Page title -->
     <title>Donate Items - OwlExchange</title>
+    <meta name="description" content="Donate your unused items to help students at KSU.">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="globals.css"> <!-- Global CSS resets and variables -->
-    <link rel="stylesheet" href="main.css"> <!-- Main site-wide styles -->
-    <link rel="stylesheet" href="styles.css" /> <!-- Component-specific styles -->
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Icon library -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -21,11 +22,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Header: Branding, navigation, search, and actions -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <!-- Logo and mobile menu button -->
                 <div class="header-left">
                     <button class="menu-toggle" id="mobileMenuBtn">
                         <i data-lucide="menu"></i>
@@ -35,11 +35,11 @@
 
                 <!-- Navigation bar -->
                 <nav class="nav">
-                    <a href="index.html" class="nav-link active">Home</a> <!-- Active page -->
-                    <a href="Browse.html" class="nav-link active">Browse</a> <!-- Active page -->
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="Browse.html" class="nav-link">Browse</a>
                     <a href="Sell.html" class="nav-link">Sell</a>
                     <a href="Exchange.html" class="nav-link">Exchange</a>
-                    <a href="Donate.html" class="nav-link">Donate</a>
+                    <a href="Donate.html" class="nav-link active">Donate</a>
                     <a href="About.html" class="nav-link">About</a>
                 </nav>
 
@@ -53,10 +53,7 @@
 
                 <!-- Header actions -->
                 <div class="header-actions">
-                    <button class="btn-primary list-item-btn">
-                        <i data-lucide="heart"></i>
-                        <span>Donate Item</span>
-                    </button>
+
                     <a href="sign-in-sign-up.html" class="btn btn-icon">
                         <i data-lucide="user"></i>
                         <span>Sign In or Sign Up</span>
@@ -66,118 +63,114 @@
         </div>
     </header>
 
-    <!-- Main content -->
-    <main>
-        <!-- Hero Section for Donate page -->
-        <section class="hero donate-hero">
-            <div class="hero-bg">
-                <img src="KSU_IMAGE_4.jpg" class="hero-image" alt="Students donating items">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="badge sustainability-badge">💚 Give Back to Community</div>
-                    <h1 class="hero-title">Share What You Don't Need</h1>
-                    <p class="hero-description">
-                        Help fellow students by donating items you no longer use. From textbooks to dorm essentials, your donations make a difference in someone's college journey.
-                    </p>
-                    <div class="hero-actions">
-                        <button class="btn-hero-primary">
-                            Start Donating
-                            <i data-lucide="heart"></i>
-                        </button>
-                        <button class="btn-hero-secondary">
-                            Browse Free Items
-                        </button>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero donate-hero">
+        <div class="hero-bg">
+            <img src="KSU_IMAGE_4.jpg" class="hero-image" alt="Many Students around the KSU symbol">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge sustainability-badge">💚 Give Back to Community</div>
+                <h1 class="hero-title">Share What You Don't Need</h1>
+                <p class="hero-description">
+                    Help fellow students by donating items you no longer use. From textbooks to dorm essentials, your donations make a difference in someone's college journey.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-hero-primary">
+                        Start Donating
+                        <i data-lucide="heart"></i>
+                    </button>
+                    <a href="Browse.html" class="btn-hero-secondary">
+                        Browse Free Items
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- How Donation Works Section -->
-        <section class="features donate-process">
-            <div class="container">
-                <div class="section-header">
-                    <h2>How Donation Works</h2>
-                    <p>Simple steps to make a positive impact</p>
+    <!-- How Donation Works -->
+    <section class="features donate-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Donation Works</h2>
+                <p>Simple steps to make a positive impact</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon green">
+                        <i data-lucide="camera"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>List Your Item</h3>
+                        <p>Take photos and describe what you're donating</p>
+                    </div>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon green">
-                            <i data-lucide="camera"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>List Your Item</h3>
-                            <p>Take photos and describe what you're donating</p>
-                        </div>
+                <div class="feature-item">
+                    <div class="feature-icon blue">
+                        <i data-lucide="message-circle"></i>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon blue">
-                            <i data-lucide="message-circle"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Connect with Students</h3>
-                            <p>Receive requests from students who need your item</p>
-                        </div>
+                    <div class="feature-content">
+                        <h3>Connect with Students</h3>
+                        <p>Receive requests from students who need your item</p>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon purple">
-                            <i data-lucide="map-pin"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Campus Handoff</h3>
-                            <p>Meet safely on campus to complete the donation</p>
-                        </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon purple">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Campus Handoff</h3>
+                        <p>Meet safely on campus to complete the donation</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Popular Donation Categories -->
-        <section class="categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Popular Donation Categories</h2>
-                    <p>Items students need most</p>
+    <!-- Popular Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Donation Categories</h2>
+                <p>Items students need most</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1755620500895-b693799658ee" alt="Textbooks & Study Material" class="category-image">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <h3>Textbooks & Study Materials</h3>
+                        <p>Help students save hundreds on textbooks</p>
+                    </div>
                 </div>
-                <div class="categories-grid">
-                    <!-- Category card template -->
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1755620500895-b693799658ee" alt="Textbooks" class="category-image">
-                        <div class="category-overlay"></div>
-                        <div class="category-content">
-                            <h3>Textbooks & Study Materials</h3>
-                            <p>Help students save hundreds on textbooks</p>
-                        </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1694151569569-8288e3118519" alt="Dorm Room Essential" class="category-image">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <h3>Dorm Room Essentials</h3>
+                        <p>Furniture, decor, and daily necessities</p>
                     </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1694151569569-8288e3118519" alt="Dorm Room Essentials" class="category-image">
-                        <div class="category-overlay"></div>
-                        <div class="category-content">
-                            <h3>Dorm Room Essentials</h3>
-                            <p>Furniture, decor, and daily necessities</p>
-                        </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f" alt="Clothing & Accessories" class="category-image">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <h3>Clothing & Accessories</h3>
+                        <p>Seasonal wear and professional attire</p>
                     </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f" alt="Clothing" class="category-image">
-                        <div class="category-overlay"></div>
-                        <div class="category-content">
-                            <h3>Clothing & Accessories</h3>
-                            <p>Seasonal wear and professional attire</p>
-                        </div>
-                    </div>
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1716471081169-cb8528a395d3" alt="Electronics" class="category-image">
-                        <div class="category-overlay"></div>
-                        <div class="category-content">
-                            <h3>Electronics & Tech</h3>
-                            <p>Calculators, chargers, and accessories</p>
-                        </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1716471081169-cb8528a395d3" alt="Electronics & Tech" class="category-image">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <h3>Electronics & Tech</h3>
+                        <p>Calculators, chargers, and accessories</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -212,7 +205,7 @@
     <!-- Scripts -->
     <script src="scripts/main.js"></script>
     <script>
-        lucide.createIcons(); // Initialize Lucide icons
+        lucide.createIcons();
     </script>
 </body>
 </html>

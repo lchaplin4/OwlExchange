@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Page title -->
     <title>Sell Items - OwlExchange</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="globals.css"> <!-- CSS reset and variables -->
-    <link rel="stylesheet" href="main.css"> <!-- Main site styles -->
-    <link rel="stylesheet" href="styles.css"> <!-- Component-specific styles -->
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
 
-    <!-- Lucide icon library -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Header section: site logo, navigation menu, search bar, user actions -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="header-left">
-                    <!-- Mobile menu toggle button -->
                     <button class="menu-toggle" id="mobileMenuBtn">
                         <i data-lucide="menu"></i>
                     </button>
-                    <!-- Site logo -->
                     <h1 class="logo">🦉 OwlExchange</h1>
                 </div>
 
-                <!-- Navigation bar -->
                 <nav class="nav">
-                    <a href="index.html" class="nav-link active">Home</a> <!-- Active page -->
-                    <a href="Browse.html" class="nav-link active">Browse</a> <!-- Active page -->
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="Browse.html" class="nav-link active">Browse</a>
                     <a href="Sell.html" class="nav-link">Sell</a>
                     <a href="Exchange.html" class="nav-link">Exchange</a>
                     <a href="Donate.html" class="nav-link">Donate</a>
                     <a href="About.html" class="nav-link">About</a>
                 </nav>
 
-                <!-- Search bar -->
                 <div class="search-container">
                     <div class="search-box">
                         <i data-lucide="search" class="search-icon"></i>
@@ -52,12 +41,8 @@
                     </div>
                 </div>
 
-                <!-- User actions -->
                 <div class="header-actions">
-                    <button id="sellBtn" class="btn-primary list-item-btn">
-                        <i data-lucide="plus"></i>
-                        <span>Sell Item</span>
-                    </button>
+               
                     <a href="sign-in-sign-up.html" class="btn btn-icon">
                         <i data-lucide="user"></i>
                         <span>Sign In or Sign Up</span>
@@ -67,10 +52,9 @@
         </div>
     </header>
 
-    <!-- Hero section: introducing the Sell page -->
     <section class="hero sell-hero">
         <div class="hero-bg">
-            <img src="KSU_IMAGE_2.jpg" class="hero-image" alt="Student selling items">
+            <img src="KSU_IMAGE_2.jpg" class="hero-image" alt="Many Students around the KSU symbol">
             <div class="hero-overlay"></div>
         </div>
         <div class="container hero-container">
@@ -85,7 +69,7 @@
                         List Your Item
                         <i data-lucide="plus"></i>
                     </button>
-                    <button class="btn-hero-secondary">
+                    <button class="btn-hero-secondary" onclick="window.location.href='Browse.html'">
                         Browse Items for Sale
                     </button>
                 </div>
@@ -93,7 +77,6 @@
         </div>
     </section>
 
-    <!-- Selling process section -->
     <section class="features sell-process">
         <div class="container">
             <div class="section-header">
@@ -132,7 +115,6 @@
         </div>
     </section>
 
-    <!-- Pricing guide section -->
     <section class="pricing-guide">
         <div class="container">
             <div class="section-header">
@@ -140,7 +122,6 @@
                 <p>Get the best value for your items</p>
             </div>
             <div class="pricing-cards">
-                <!-- Textbook pricing card -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Textbooks</h3>
@@ -156,7 +137,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Electronics pricing card -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Electronics</h3>
@@ -172,7 +152,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Furniture pricing card -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Furniture & Decor</h3>
@@ -192,24 +171,6 @@
         </div>
     </section>
 
-    <!-- Listings section -->
-    <section class="listings">
-        <div class="container">
-            <div class="section-header">
-                <h2>Recently Sold Items</h2>
-                <p>See what's selling on campus</p>
-            </div>
-            <div class="listings-grid" id="saleListings"></div>
-            <div class="section-footer">
-                <button class="btn-outline">
-                    View All Items for Sale
-                    <i data-lucide="arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -239,29 +200,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts/main.js"></script>
     <script>
         lucide.createIcons();
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const saleData = [
-                { name: "Calculus Textbook", price: 85, originalPrice: 299, image: "https://images.unsplash.com/photo-1755620500895-b693799658ee", condition: "Good", seller: "Alex K." },
-                { name: "MacBook Pro", price: 850, originalPrice: 1299, image: "https://images.unsplash.com/photo-1716471081169-cb8528a395d3", condition: "Excellent", seller: "Maria S." },
-                { name: "Dorm Room Chair", price: 120, originalPrice: 280, image: "https://images.unsplash.com/photo-1694151569569-8288e3118519", condition: "Like New", seller: "Jake M." },
-                { name: "Winter Coat", price: 45, originalPrice: 180, image: "https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f", condition: "Good", seller: "Emma R." }
-            ];
-
-            const container = document.getElementById('saleListings');
-            container.innerHTML = saleData.map(item => `
-                <div class="product-card">
-                    <img src="${item.image}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>$${item.price} <span class="price-original">$${item.originalPrice}</span></p>
-                    <p>${item.condition} - by ${item.seller}</p>
-                </div>
-            `).join('');
-        });
     </script>
 </body>
 </html>
