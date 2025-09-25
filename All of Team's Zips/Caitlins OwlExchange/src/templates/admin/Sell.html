@@ -1,0 +1,521 @@
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Sell Items - OwlExchange</title>
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_box" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" >
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    
+</head>
+
+<body>
+<!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="menu-toggle" id="mobileMenuBtn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <h1 class="logo">🦉 OwlExchange</h1>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Browse</a>
+                    <a href="sell.html" class="nav-link" >Sell</a>
+                    <a href="exchange.html" class="nav-link">Exchange</a>
+                    <a href="donate.html" class="nav-link">Donate</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </nav>
+
+                <div class="search-container">
+                    <div class="search-box">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" placeholder="Search items for sale..." class="search-input">
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                   <!--  <button class="btn-icon search-mobile">
+                        <i data-lucide="search"></i>
+                    </button>-->
+                    <button id="sellBtn"class="btn-primary list-item-btn">
+                        <i data-lucide="plus"></i>
+                        <span>Sell Item</span>
+                    </button>
+                    <!-- link to your list/add to Sell page or items on website
+                    <script>
+                    document.getElementById("sellBtn").onclick = function () {
+                    window.location.href = "sell.html"; //Link to your Sell page
+                    };
+                    </script>
+                    
+                    
+                    
+                    -->
+                    <!-- Sign in button-->
+                    <a href="index_signin.html" class="btn btn-icon">
+                          <i data-lucide="user"></i>
+                        <span>Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section - Sell -->
+        <section class="hero sell-hero">
+            <div class="hero-bg">
+                <img src="KSU_IMAGE_2.jpg" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge sustainability-badge">💰 Turn Items into Cash</div>
+                    <h1 class="hero-title">Sell What You Don't Need</h1>
+                    <p class="hero-description">
+                        Turn your unused textbooks, electronics, and dorm items into cash. Connect directly with fellow students who need what you're selling.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn-hero-primary">
+                            List Your Item
+                            <i data-lucide="plus"></i>
+                        </button>
+                        <button class="btn-hero-secondary">
+                            Browse Items for Sale
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selling Process -->
+        <section class="features sell-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How Selling Works</h2>
+                    <p>Easy steps to earn money from your unused items</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon green">
+                            <i data-lucide="camera"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Take Great Photos</h3>
+                            <p>Upload clear photos and set your price</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon blue">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Connect with Buyers</h3>
+                            <p>Chat with interested students safely</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon purple">
+                            <i data-lucide="handshake"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Complete the Sale</h3>
+                            <p>Meet on campus for safe exchange</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Guide -->
+        <section class="pricing-guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pricing Your Items</h2>
+                    <p>Get the best value for your items</p>
+                </div>
+                
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Textbooks</h3>
+                            <div class="pricing-range">$20-$150</div>
+                        </div>
+                        <div class="pricing-tips">
+                            <h4>Pricing Tips:</h4>
+                            <ul>
+                                <li>Check current edition value</li>
+                                <li>Consider condition honestly</li>
+                                <li>Research campus bookstore prices</li>
+                                <li>Price 40-60% of retail value</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Electronics</h3>
+                            <div class="pricing-range">$15-$800</div>
+                        </div>
+                        <div class="pricing-tips">
+                            <h4>Pricing Tips:</h4>
+                            <ul>
+                                <li>Check online marketplace values</li>
+                                <li>Include original accessories</li>
+                                <li>Test all functions first</li>
+                                <li>Factor in age and usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Furniture & Decor</h3>
+                            <div class="pricing-range">$10-$200</div>
+                        </div>
+                        <div class="pricing-tips">
+                            <h4>Pricing Tips:</h4>
+                            <ul>
+                                <li>Consider pickup logistics</li>
+                                <li>Price for quick sale</li>
+                                <li>Bundle related items</li>
+                                <li>Account for wear and tear</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling Items -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Best Selling Categories</h2>
+                    <p>Items that sell fastest on campus</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1755620500895-b693799658ee" alt="Textbooks" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Textbooks & Study Guides</h3>
+                            <p>Highest demand, quick sales</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1716471081169-cb8528a395d3" alt="Electronics" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Laptops & Electronics</h3>
+                            <p>High value, tech-savvy buyers</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1694151569569-8288e3118519" alt="Furniture" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Dorm Furniture</h3>
+                            <p>Moving season bestsellers</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f" alt="Clothing" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Designer Clothing</h3>
+                            <p>Brand names move quickly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Sales -->
+        <section class="listings">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recently Sold Items</h2>
+                    <p>See what's selling on campus</p>
+                </div>
+                
+                <div class="listings-grid" id="saleListings">
+                    <!-- Sale listings will be populated by JavaScript -->
+                </div>
+                
+                <div class="section-footer">
+                    <button class="btn-outline">
+                        View All Items for Sale
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seller Success Stories -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Seller Success Stories</h2>
+                    <p>Real students, real earnings</p>
+                </div>
+                
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150&h=150&fit=crop&crop=face" alt="Jessica">
+                        </div>
+                        <div class="story-content">
+                            <h3>Jessica, Junior</h3>
+                            <p>"Sold my entire freshman textbook collection for $340. Way better than the campus bookstore buyback!"</p>
+                            <div class="story-earnings">Earned: $340</div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Marcus">
+                        </div>
+                        <div class="story-content">
+                            <h3>Marcus, Senior</h3>
+                            <p>"Moving off-campus meant selling furniture. Made $180 in one weekend and helped other students furnish their dorms."</p>
+                            <div class="story-earnings">Earned: $180</div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Amy">
+                        </div>
+                        <div class="story-content">
+                            <h3>Amy, Sophomore</h3>
+                            <p>"Upgraded my laptop and sold the old one for $450. The whole process was so easy and safe."</p>
+                            <div class="story-earnings">Earned: $450</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selling Tips -->
+        <section class="selling-tips">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pro Selling Tips</h2>
+                    <p>Maximize your earnings with these strategies</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="camera"></i>
+                        </div>
+                        <h3>Quality Photos Win</h3>
+                        <p>Use natural light, show multiple angles, and highlight key features. Good photos sell items 3x faster.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Timing Matters</h3>
+                        <p>List textbooks before semester starts, furniture during move-in/out periods, and winter clothes in fall.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <h3>Write Great Descriptions</h3>
+                        <p>Be honest about condition, include dimensions, mention any issues, and explain why you're selling.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="trending-down"></i>
+                        </div>
+                        <h3>Price to Sell</h3>
+                        <p>Research similar items, price competitively, and be open to reasonable negotiations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Earning?</h2>
+                    <p>
+                        Join thousands of students who've turned their unused items into spending money. List your first item in under 5 minutes.
+                    </p>
+                    <div class="cta-actions">
+                        <button class="btn-cta-primary">List Your First Item</button>
+                        <button class="btn-cta-secondary">Browse Items to Buy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>🦉 OwlExchange</h3>
+                    <p>
+                        The sustainable marketplace for students to buy, sell, exchange, and donate items within their campus community.
+                    </p>
+                    <div class="social-links">
+                        <button class="btn-icon">
+                            <i data-lucide="instagram"></i>
+                        </button>
+                        <button class="btn-icon">
+                            <i data-lucide="twitter"></i>
+                        </button>
+                        <button class="btn-icon">
+                            <i data-lucide="mail"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">Campus Pickup</a></li>
+                        <li><a href="#">Student Verification</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Connected</h4>
+                    <p>
+                        Get notified about new listings and sustainability tips.
+                    </p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Student email" class="newsletter-input">
+                        <button class="btn-primary newsletter-btn">Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 OwlExchange. Building sustainable campus communities.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Community Rules</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Load sale listings
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSaleListings();
+        });
+        
+        function loadSaleListings() {
+            const saleData = [
+                {
+                    name: "Calculus Textbook (12th Edition)",
+                    price: 85,
+                    originalPrice: 299,
+                    image: "https://images.unsplash.com/photo-1755620500895-b693799658ee",
+                    condition: "Good",
+                    seller: "Alex K."
+                },
+                {
+                    name: "MacBook Pro 13\" (2021)",
+                    price: 850,
+                    originalPrice: 1299,
+                    image: "https://images.unsplash.com/photo-1716471081169-cb8528a395d3",
+                    condition: "Excellent",
+                    seller: "Maria S."
+                },
+                {
+                    name: "Dorm Room Chair + Desk Set",
+                    price: 120,
+                    originalPrice: 280,
+                    image: "https://images.unsplash.com/photo-1694151569569-8288e3118519",
+                    condition: "Like New",
+                    seller: "Jake M."
+                },
+                {
+                    name: "Winter Coat Collection (Size L)",
+                    price: 45,
+                    originalPrice: 180,
+                    image: "https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f",
+                    condition: "Good",
+                    seller: "Emma R."
+                }
+            ];
+            
+            const container = document.getElementById('saleListings');
+            container.innerHTML = saleData.map(item => `
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="${item.image}" alt="${item.name}" class="product-image">
+                        <div class="product-badges">
+                            <div class="badge sale">Sale</div>
+                        </div>
+                        <div class="product-condition">${item.condition}</div>
+                        <button class="product-favorite btn-icon">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">${item.name}</h3>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$${item.price}</span>
+                                <span class="price-original">$${item.originalPrice}</span>
+                            </div>
+                            <button class="product-action btn-primary">Contact Seller</button>
+                        </div>
+                        <div class="seller-info">by ${item.seller}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
+  

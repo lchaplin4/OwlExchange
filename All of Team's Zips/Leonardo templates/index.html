@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlExchange - Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        button {
+            width: 120px;
+            padding: 10px 0;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to OwlExchange</h1>
+
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Signup</button>
+    <button id="adminBtn">Admin Dashboard</button>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const adminBtn = document.getElementById('adminBtn');
+
+        loginBtn.addEventListener('click', () => {
+            window.location.href = "/signin";
+        });
+
+        signupBtn.addEventListener('click', () => {
+            window.location.href = "/signup";
+        });
+
+        adminBtn.addEventListener('click', () => {
+            window.location.href = "/admin";  // Updated to point to adminpage.html route
+        });
+    </script>
+
+</body>
+</html>

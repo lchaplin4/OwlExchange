@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In / Sign Up - OwlExchange</title>
-    <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
         /* Specific styles for auth page */
@@ -290,6 +290,102 @@
             font-size: 0.875rem;
         }
 
+        /* Form Row for Side-by-Side Fields */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Account Type Selection */
+        .account-type-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .account-type-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .account-type-option {
+            position: relative;
+        }
+
+        .account-type-radio {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .account-type-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 0.5rem;
+            background: var(--card);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        .account-type-card:hover {
+            border-color: var(--primary);
+            background: var(--accent);
+        }
+
+        .account-type-radio:checked + .account-type-card {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1));
+            box-shadow: 0 0 0 3px rgba(3, 2, 19, 0.1);
+        }
+
+        .account-type-icon {
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .buyer-icon {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .seller-icon {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+
+        .account-type-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--foreground);
+        }
+
+        .account-type-description {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+            line-height: 1.3;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .auth-hero {
@@ -313,6 +409,14 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
+
+            .account-type-options {
+                grid-template-columns: 1fr;
+            }
+
+            .account-type-card {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -328,12 +432,14 @@
                     <h1 class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">🦉 OwlExchange</a></h1>
                 </div>
 
+                <!-- Navigation bar -->
                 <nav class="nav">
-                    <a href="../index.html" class="nav-link">Browse</a>
-                    <a href="sell.html" class="nav-link">Sell</a>
-                    <a href="exchange.html" class="nav-link">Exchange</a>
-                    <a href="donate.html" class="nav-link">Donate</a>
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="index.html" class="nav-link active">Home</a> <!-- Active page -->
+                    <a href="Browse.html" class="nav-link active">Browse</a> <!-- Active page -->
+                    <a href="Sell.html" class="nav-link">Sell</a>
+                    <a href="Exchange.html" class="nav-link">Exchange</a>
+                    <a href="Donate.html" class="nav-link">Donate</a>
+                    <a href="About.html" class="nav-link">About</a>
                 </nav>
 
                 <div class="search-container">
@@ -355,14 +461,6 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav" id="mobileNav">
-            <a href="../index.html" class="mobile-nav-link">Browse</a>
-            <a href="sell.html" class="mobile-nav-link">Sell</a>
-            <a href="exchange.html" class="mobile-nav-link">Exchange</a>
-            <a href="donate.html" class="mobile-nav-link">Donate</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -391,7 +489,7 @@
                     <form class="auth-form">
                         <div class="form-group">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-input" placeholder="your.email@student.edu" required>
+                            <input type="email" class="form-input" placeholder="Enter your email here" required>
                         </div>
 
                         <div class="form-group">
@@ -437,7 +535,44 @@
                     <form class="auth-form">
                         <div class="form-group">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-input" placeholder="your.email@student.edu" required>
+                            <input type="email" class="form-input" placeholder="Enter your email here" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="account-type-group">
+                            <label class="form-label">I want to sign up as:</label>
+                            <div class="account-type-options">
+                                <div class="account-type-option">
+                                    <input type="radio" id="account-buyer" name="accountType" value="buyer" class="account-type-radio" required>
+                                    <label for="account-buyer" class="account-type-card">
+                                        <div class="account-type-icon buyer-icon">
+                                            <i data-lucide="shopping-bag"></i>
+                                        </div>
+                                        <div class="account-type-title">Buyer</div>
+                                        <div class="account-type-description">Find great deals on textbooks, dorm items, and more</div>
+                                    </label>
+                                </div>
+                                <div class="account-type-option">
+                                    <input type="radio" id="account-seller" name="accountType" value="seller" class="account-type-radio" required>
+                                    <label for="account-seller" class="account-type-card">
+                                        <div class="account-type-icon seller-icon">
+                                            <i data-lucide="store"></i>
+                                        </div>
+                                        <div class="account-type-title">Seller</div>
+                                        <div class="account-type-description">List items to sell, exchange, or donate to fellow students</div>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -671,6 +806,27 @@
                 const isSignUp = this.closest('#signup-form') !== null;
                 
                 if (isSignUp) {
+                    // Check first name and last name
+                    const firstName = this.querySelector('input[type="text"]:nth-of-type(1)').value.trim();
+                    const lastName = this.querySelector('input[type="text"]:nth-of-type(2)').value.trim();
+                    
+                    if (!firstName) {
+                        alert('Please enter your first name');
+                        return;
+                    }
+                    
+                    if (!lastName) {
+                        alert('Please enter your last name');
+                        return;
+                    }
+                    
+                    // Check account type selection
+                    const accountType = this.querySelector('input[name="accountType"]:checked');
+                    if (!accountType) {
+                        alert('Please select whether you want to sign up as a buyer or seller');
+                        return;
+                    }
+                    
                     // Validate password confirmation
                     const password = this.querySelector('input[type="password"]:nth-of-type(1)').value;
                     const confirmPassword = this.querySelector('input[type="password"]:nth-of-type(2)').value;
@@ -687,13 +843,14 @@
                         return;
                     }
                     
-                    alert('Account created successfully! Welcome to OwlExchange!');
+                    const accountTypeText = accountType.value === 'buyer' ? 'buyer' : 'seller';
+                    alert(`Account created successfully! Welcome to OwlExchange, ${firstName}! You're all set up as a ${accountTypeText}.`);
                 } else {
                     alert('Signed in successfully! Welcome back!');
                 }
                 
                 // Redirect to main page
-                window.location.href = '../index.html';
+                window.location.href = 'index.html';
             });
         });
 

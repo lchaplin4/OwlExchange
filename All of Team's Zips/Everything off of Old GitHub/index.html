@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlExchange - Student Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo and Mobile Menu -->
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <h1 class="logo">🦉 OwlExchange</h1>
+                </div>
+
+                <!-- Navigation -->
+                <nav>
+                    <a href="Browser.html" class="nav-link">Browse</a>
+                    <a href="Sell.html" class="nav-link">Sell</a>
+                    <a href="Exchange.html" class="nav-link">Exchange</a>
+                    <a href="Donate.html" class="nav-link">Donate</a>
+                </nav>
+
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" placeholder="Search items..." class="search-input">
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="header-actions">
+                    <button class="btn btn-ghost mobile-search-btn">
+                        <i data-lucide="search"></i>
+                    </button>
+                    <button class="btn btn-outline list-item-btn">
+                        <i data-lucide="plus"></i>
+                        <span>List Item</span>
+                    </button>
+                    <a href="index_signin.html">
+                        <button class="btn btn-ghost">
+                            <i data-lucide="user"></i>
+                        </button>
+                    </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1570937943653-7de35201f04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMGNhbXB1c3xlbnwxfHx8fDE3NTc5MjUzMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Students on campus" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge sustainability-badge">🌱 Sustainable Community</div>
+                <h1 class="hero-title">Your Campus Marketplace</h1>
+                <p class="hero-description">
+                    Buy, sell, exchange, and donate items with fellow students. Save money, reduce waste, and build
+                    community connections right on campus.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large">
+                        Start Browsing <i data-lucide="arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline btn-large btn-white">
+                        List Your Item
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-green">
+                        <i data-lucide="recycle"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sustainable Living</h3>
+                        <p>Reduce waste and save money</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-blue">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Student Community</h3>
+                        <p>Connect with fellow students</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon feature-icon-purple">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Campus Pickup</h3>
+                        <p>Meet safely on campus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse Categories</h2>
+                <p>Find exactly what you need for student life</p>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section class="featured-listings">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Listings</h2>
+                <p>Fresh items from your campus community</p>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+
+            <div class="section-footer">
+                <button class="btn btn-outline btn-large">
+                    View All Listings <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join OwlExchange?</h2>
+                <p>
+                    Start saving money and helping the environment. List your first item or browse what your fellow
+                    students are offering.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large">
+                        List Your First Item
+                    </button>
+                    <button class="btn btn-outline btn-large btn-white">
+                        Browse Items
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>🦉 OwlExchange</h3>
+                    <p>
+                        The sustainable marketplace for students to buy, sell, exchange, and donate items within their
+                        campus community.
+                    </p>
+                    <div class="social-links">
+                        <button class="btn btn-ghost btn-small">
+                            <i data-lucide="instagram"></i>
+                        </button>
+                        <button class="btn btn-ghost btn-small">
+                            <i data-lucide="twitter"></i>
+                        </button>
+                        <button class="btn btn-ghost btn-small">
+                            <i data-lucide="mail"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">Campus Pickup</a></li>
+                        <li><a href="#">Student Verification</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <p>
+                        Get notified about new listings and sustainability tips.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Student email" class="newsletter-input">
+                        <button class="btn btn-primary btn-small">Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-separator"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OwlExchange. Building sustainable campus communities.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Community Rules</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

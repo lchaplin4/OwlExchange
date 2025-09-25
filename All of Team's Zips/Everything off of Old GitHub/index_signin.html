@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlExchange - Test Page</title>
+    <style>
+        /* General Body Styles */
+        body {
+            background-image: url('ksu_image.png'); /* Set background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Keep the image fixed when scrolling */
+            background-color: #222; /* Dark gray fallback color */
+            
+            font-family:Montdserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Title */
+        h1 {
+            color: #e0e0e0; /* Off-white for the title */
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Buttons */
+        button {
+            width: 200px; /* Wider buttons */
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        /* Login Button - Royal Gold Accent */
+        #loginBtn {
+            background-color: #ffd700; /* Royal Gold */
+            color: #333; /* Dark gray text on gold button */
+        }
+
+        #loginBtn:hover {
+            background-color: #e0b800; /* Slightly darker gold on hover */
+            transform: translateY(-2px);
+            color: #333;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Signup & Admin Buttons - Dark Gray Style */
+        #signupBtn, #adminBtn {
+            background-color: #e0b800; 
+            color:#333; 
+            
+        }
+
+        #signupBtn:hover, #adminBtn:hover {
+            background-color: #e0b800;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15 px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Active/Press State */
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+     
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to OwlExchange</h1>
+
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Signup</button>
+    <button id="adminBtn">Admin Dashboard</button>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const adminBtn = document.getElementById('adminBtn');
+
+        loginBtn.addEventListener('click', () => {
+            window.location.href = "/signin";
+        });
+
+        signupBtn.addEventListener('click', () => {
+            window.location.href = "/signup";
+        });
+
+        adminBtn.addEventListener('click', () => {
+            window.location.href = "/admin"; 
+        });
+    </script>
+
+
+   
+
+  
+</body>
+</html>
