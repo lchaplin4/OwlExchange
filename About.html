@@ -1,29 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate Items - OwlExchange</title>
-    <link rel="stylesheet" href="globals.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Page title -->
+    <title>About - OwlExchange</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="globals.css"> <!-- Global CSS resets and variables -->
+    <link rel="stylesheet" href="main.css"> <!-- Main site-wide styles -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Component-specific styles -->
+
+    <!-- Icon library -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_box" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" >
-
-  <!-- Google Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
-
 <body>
-    <!-- Header -->
+    <!-- Header: Branding, navigation, search, and actions -->
     <header class="header">
         <div class="container">
             <div class="header-content">
+                <!-- Logo and menu button -->
                 <div class="header-left">
                     <button class="menu-toggle" id="mobileMenuBtn">
                         <i data-lucide="menu"></i>
@@ -31,14 +33,16 @@
                     <h1 class="logo">🦉 OwlExchange</h1>
                 </div>
 
-             <nav class="nav">
+                <!-- Navigation bar -->
+                <nav class="nav">
                     <a href="index.html" class="nav-link">Browse</a>
-                    <a href="Sell.html" class="nav-link" >Sell</a>
+                    <a href="Sell.html" class="nav-link">Sell</a>
                     <a href="Exchange.html" class="nav-link">Exchange</a>
                     <a href="Donate.html" class="nav-link">Donate</a>
-                    <a href="About.html" class="nav-link">About</a>
+                    <a href="About.html" class="nav-link active">About</a>
                 </nav>
 
+                <!-- Search box -->
                 <div class="search-container">
                     <div class="search-box">
                         <i data-lucide="search" class="search-icon"></i>
@@ -46,13 +50,14 @@
                     </div>
                 </div>
 
+                <!-- Header actions -->
                 <div class="header-actions">
                     <button class="btn-primary list-item-btn">
                         <i data-lucide="plus"></i>
                         <span>List Item</span>
                     </button>
-                     <a href="index_signin.html" class="btn btn-icon">
-                          <i data-lucide="user"></i>
+                    <a href="index_signin.html" class="btn btn-icon">
+                        <i data-lucide="user"></i>
                         <span>Sign In</span>
                     </a>
                 </div>
@@ -60,331 +65,83 @@
         </div>
     </header>
 
+    <!-- Main content -->
     <main>
-        <!-- Hero Section - About -->
+        <!-- Hero Section for About page -->
         <section class="hero about-hero">
             <div class="hero-bg">
-                <img src="KSU_IMAGE_5.jpg" class="hero-image">
+                <img src="about_hero.jpg" class="hero-image" alt="Students exchanging items">
                 <div class="hero-overlay"></div>
             </div>
-            
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge sustainability-badge">🌍 Building Community</div>
-                    <h1 class="hero-title">About OwlExchange</h1>
+                    <div class="badge about-badge">📚 About Us</div>
+                    <h1 class="hero-title">Building a Sustainable Student Community</h1>
                     <p class="hero-description">
-                        We're creating a more sustainable and connected campus community where students can easily buy, sell, exchange, and donate items with each other.
+                        OwlExchange is dedicated to creating a safe and efficient platform where students can buy, sell, exchange, and donate items on campus — reducing waste and fostering community.
                     </p>
-                    <div class="hero-actions">
-                        <button class="btn-hero-primary">
-                            Join Our Community
-                            <i data-lucide="users"></i>
-                        </button>
-                        <button class="btn-hero-secondary">
-                            Learn How It Works
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Mission Statement -->
-        <section class="mission">
-            <div class="container">
-                <div class="mission-content">
-                    <div class="section-header">
-                        <h2>Our Mission</h2>
-                        <p>Empowering students to live sustainably while building stronger campus communities</p>
-                    </div>
-                    
-                    <div class="mission-grid">
-                        <div class="mission-item">
-                            <div class="mission-icon">
-                                <i data-lucide="recycle"></i>
-                            </div>
-                            <h3>Reduce Waste</h3>
-                            <p>Keep perfectly good items out of landfills by giving them new life with students who need them.</p>
-                        </div>
-                        
-                        <div class="mission-item">
-                            <div class="mission-icon">
-                                <i data-lucide="dollar-sign"></i>
-                            </div>
-                            <h3>Save Money</h3>
-                            <p>Help students afford college essentials without breaking the bank through affordable secondhand options.</p>
-                        </div>
-                        
-                        <div class="mission-item">
-                            <div class="mission-icon">
-                                <i data-lucide="heart"></i>
-                            </div>
-                            <h3>Build Community</h3>
-                            <p>Foster meaningful connections between students through shared sustainability values and mutual support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works -->
-        <section class="how-it-works">
+        <!-- About Details Section -->
+        <section class="about-details">
             <div class="container">
                 <div class="section-header">
-                    <h2>How OwlExchange Works</h2>
-                    <p>Simple, safe, and sustainable transactions</p>
+                    <h2>Our Mission</h2>
+                    <p>Connecting students for a greener campus.</p>
                 </div>
-                
-                <div class="steps-grid">
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Create Your Account</h3>
-                            <p>Sign up with your student email to join your campus community. We verify all users for safety and trust.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>List or Browse Items</h3>
-                            <p>Post items you want to sell, trade, or donate. Or browse what other students are offering on campus.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Connect Safely</h3>
-                            <p>Use our secure messaging system to discuss details, ask questions, and arrange meetups.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Meet on Campus</h3>
-                            <p>Complete transactions safely in public campus locations. Build trust through face-to-face interactions.</p>
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    OwlExchange was founded to bridge the gap between students who need items and those who want to give back. We aim to:
+                </p>
+                <ul>
+                    <li>Promote sustainability on campus.</li>
+                    <li>Reduce waste by reusing and donating items.</li>
+                    <li>Create a safe, easy-to-use marketplace.</li>
+                    <li>Encourage community engagement.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Impact Numbers -->
-        <section class="impact-stats">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Impact</h2>
-                    <p>Making a difference one transaction at a time</p>
-                </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">12,847</div>
-                        <div class="stat-label">Items Exchanged</div>
-                        <div class="stat-description">Books, electronics, furniture, and more</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8,592</div>
-                        <div class="stat-label">Active Students</div>
-                        <div class="stat-description">Across 47 campus communities</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">$892,340</div>
-                        <div class="stat-label">Money Saved</div>
-                        <div class="stat-description">Helping students afford college</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24.7 tons</div>
-                        <div class="stat-label">Waste Diverted</div>
-                        <div class="stat-description">From landfills to new homes</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Values -->
-        <section class="values">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Values</h2>
-                    <p>What drives everything we do</p>
-                </div>
-                
-                <div class="values-grid">
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="shield-check"></i>
-                        </div>
-                        <h3>Safety First</h3>
-                        <p>Student verification, secure messaging, and campus-only meetups ensure safe transactions for everyone.</p>
-                    </div>
-                    
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="leaf"></i>
-                        </div>
-                        <h3>Sustainability</h3>
-                        <p>Every item that finds a new home instead of the trash makes our planet a little bit better.</p>
-                    </div>
-                    
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="users"></i>
-                        </div>
-                        <h3>Community</h3>
-                        <p>We believe in the power of students helping students and building lasting campus connections.</p>
-                    </div>
-                    
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="star"></i>
-                        </div>
-                        <h3>Transparency</h3>
-                        <p>Clear pricing, honest descriptions, and verified reviews help everyone make informed decisions.</p>
-                    </div>
-                    
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="zap"></i>
-                        </div>
-                        <h3>Simplicity</h3>
-                        <p>We make buying, selling, trading, and donating as easy as possible so you can focus on your studies.</p>
-                    </div>
-                    
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i data-lucide="handshake"></i>
-                        </div>
-                        <h3>Fairness</h3>
-                        <p>Everyone deserves equal access to affordable goods and the opportunity to earn from their unused items.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team (Optional - could be added later) -->
+        <!-- Team Section -->
         <section class="team">
             <div class="container">
                 <div class="section-header">
-                    <h2>Built by Students, for Students</h2>
-                    <p>Founded by college students who experienced the challenges firsthand</p>
+                    <h2>Meet the Team</h2>
+                    <p>The minds behind OwlExchange.</p>
                 </div>
-                
-                <div class="founder-story">
-                    <div class="story-content">
-                        <p class="story-text">
-                            "As broke college students, we were tired of paying hundreds for textbooks we'd use for one semester, 
-                            and throwing away perfectly good items when moving between dorms. We knew there had to be a better way 
-                            to help students save money and reduce waste while building stronger campus communities."
-                        </p>
-                        <div class="story-attribution">
-                            <strong>— The OwlExchange Founding Team</strong>
-                        </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="team_member1.jpg" alt="Team Member 1">
+                        <h3>Alex Johnson</h3>
+                        <p>Founder & Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="team_member2.jpg" alt="Team Member 2">
+                        <h3>Sarah Lee</h3>
+                        <p>UI/UX Designer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="team_member3.jpg" alt="Team Member 3">
+                        <h3>Michael Chen</h3>
+                        <p>Project Manager</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Safety & Trust -->
-        <section class="safety">
+        <!-- Values Section -->
+        <section class="values">
             <div class="container">
                 <div class="section-header">
-                    <h2>Safety & Trust</h2>
-                    <p>How we keep our community secure</p>
+                    <h2>Our Core Values</h2>
                 </div>
-                
-                <div class="safety-grid">
-                    <div class="safety-item">
-                        <div class="safety-icon">
-                            <i data-lucide="mail-check"></i>
-                        </div>
-                        <h3>Student Verification</h3>
-                        <p>All users must verify their student email address before joining their campus community.</p>
-                    </div>
-                    
-                    <div class="safety-item">
-                        <div class="safety-icon">
-                            <i data-lucide="map-pin"></i>
-                        </div>
-                        <h3>Campus-Only Meetings</h3>
-                        <p>All transactions happen on campus in public, well-lit areas for maximum safety.</p>
-                    </div>
-                    
-                    <div class="safety-item">
-                        <div class="safety-icon">
-                            <i data-lucide="message-circle"></i>
-                        </div>
-                        <h3>Secure Messaging</h3>
-                        <p>Built-in chat system keeps your personal contact information private until you choose to share.</p>
-                    </div>
-                    
-                    <div class="safety-item">
-                        <div class="safety-icon">
-                            <i data-lucide="flag"></i>
-                        </div>
-                        <h3>Report System</h3>
-                        <p>Easy reporting tools help us quickly address any issues and maintain community standards.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about OwlExchange</p>
-                </div>
-                
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>Is OwlExchange free to use?</h3>
-                        <p>Yes! OwlExchange is completely free for students. We don't charge listing fees, transaction fees, or membership costs.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>How do I verify my student status?</h3>
-                        <p>Simply sign up with your .edu email address. We'll send a verification link to confirm you're a current student.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>What if something goes wrong with a transaction?</h3>
-                        <p>Our support team is here to help resolve any issues. Use our report system or contact us directly for assistance.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Can I sell items to students at other universities?</h3>
-                        <p>Currently, OwlExchange focuses on campus-specific communities to ensure safe, local transactions.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>How do you handle disputes between users?</h3>
-                        <p>We have a fair resolution process that reviews evidence from both parties and mediates solutions when needed.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Is my personal information secure?</h3>
-                        <p>We take privacy seriously and never share your personal information. You control what details to share with other users.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Join the Movement?</h2>
-                    <p>
-                        Become part of a growing community of students who are saving money, reducing waste, and building connections through sustainable commerce.
-                    </p>
-                    <div class="cta-actions">
-                        <button class="btn-cta-primary">Get Started Today</button>
-                        <button class="btn-cta-secondary">Contact Us</button>
-                    </div>
-                </div>
+                <ul class="values-list">
+                    <li><strong>Sustainability:</strong> Minimize waste through reuse.</li>
+                    <li><strong>Community:</strong> Build stronger connections among students.</li>
+                    <li><strong>Safety:</strong> Ensure secure transactions and meetups.</li>
+                    <li><strong>Transparency:</strong> Open communication and trust.</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -395,71 +152,34 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3>🦉 OwlExchange</h3>
-                    <p>
-                        The sustainable marketplace for students to buy, sell, exchange, and donate items within their campus community.
-                    </p>
-                    <div class="social-links">
-                        <button class="btn-icon">
-                            <i data-lucide="instagram"></i>
-                        </button>
-                        <button class="btn-icon">
-                            <i data-lucide="twitter"></i>
-                        </button>
-                        <button class="btn-icon">
-                            <i data-lucide="mail"></i>
-                        </button>
-                    </div>
+                    <p>Your sustainable campus marketplace.</p>
                 </div>
-
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#">How It Works</a></li>
                         <li><a href="#">Safety Guidelines</a></li>
                         <li><a href="#">Campus Pickup</a></li>
-                        <li><a href="#">Student Verification</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h4>Support</h4>
                     <ul class="footer-links">
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Report an Issue</a></li>
-                        <li><a href="#">Community Guidelines</a></li>
-                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-column">
-                    <h4>Stay Connected</h4>
-                    <p>
-                        Get notified about new listings and sustainability tips.
-                    </p>
-                    <div class="newsletter">
-                        <input type="email" placeholder="Student email" class="newsletter-input">
-                        <button class="btn-primary newsletter-btn">Join</button>
-                    </div>
-                </div>
             </div>
-
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 OwlExchange. Building sustainable campus communities.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Community Rules</a>
-                    </div>
-                </div>
+                <p>&copy; 2025 OwlExchange. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../scripts/main.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        lucide.createIcons(); // Initialize Lucide icons
     </script>
 </body>
 </html>
