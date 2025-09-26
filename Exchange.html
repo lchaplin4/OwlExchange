@@ -76,86 +76,286 @@
         </div>
     </section>
 
-    <section class="features exchange-process">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Simple steps to exchange items with fellow students</p>
+     <!-- How Trading Works -->
+        <section class="features exchange-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How Trading Works</h2>
+                    <p>Simple steps to fair exchanges</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon blue">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>List What You Have</h3>
+                            <p>Post items you want to trade with clear photos and descriptions</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon green">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Find What You Want</h3>
+                            <p>Browse available items and propose fair trade exchanges</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon purple">
+                            <i data-lucide="handshake"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Make the Trade</h3>
+                            <p>Meet on campus to inspect items and complete the exchange</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon green">
-                        <i data-lucide="camera"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>List Your Item</h3>
-                        <p>Take photos, describe your item, and post it for exchange</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon blue">
-                        <i data-lucide="message-circle"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Negotiate Trades</h3>
-                        <p>Chat with other students to find the best match for your exchange</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon purple">
-                        <i data-lucide="map-pin"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Meet Up</h3>
-                        <p>Coordinate safe exchanges on campus</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-<section class="categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Popular Exchange Categories</h2>
-                <p>See what's trending among students</p>
+        <!-- Trade Categories -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Trade Categories</h2>
+                    <p>Items students love to exchange</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1755620500895-b693799658ee" alt="Textbooks" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Textbook Swaps</h3>
+                            <p>Trade for different subjects or editions</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1716471081169-cb8528a395d3" alt="Electronics" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Tech Upgrades</h3>
+                            <p>Exchange for newer models or different brands</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f" alt="Clothing" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Size & Style Swaps</h3>
+                            <p>Trade for different sizes or seasonal wear</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1694151569569-8288e3118519" alt="Dorm items" class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <h3>Dorm Decor Trading</h3>
+                            <p>Refresh your space with new items</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1755620500895-b693799658ee" alt="Textbook" class="category-image">
-                    <div class="category-overlay"></div>
-                    <div class="category-content">
-                        <h3>Textbooks</h3>
-                        <p>Swap textbooks to save costs and reduce waste</p>
-                    </div>
+        </section>
+
+        <!-- Active Trades */
+        <section class="listings">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Active Trade Offers</h2>
+                    <p>Current items available for exchange</p>
                 </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1694151569569-8288e3118519" alt="Dorm Furniture" class="category-image">
-                    <div class="category-overlay"></div>
-                    <div class="category-content">
-                        <h3>Dorm Furniture</h3>
-                        <p>Exchange furniture, decor, and necessities</p>
-                    </div>
+                
+                <div class="listings-grid" id="exchangeListings">
+                    <!-- Exchange listings will be populated by JavaScript -->
                 </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1724763626380-ee4188fdcf6f" alt="Clothing" class="category-image">
-                    <div class="category-overlay"></div>
-                    <div class="category-content">
-                        <h3>Clothing</h3>
-                        <p>Trade seasonal wear and accessories</p>
-                    </div>
+                
+                <div class="section-footer">
+                    <button class="btn-outline">
+                        View All Trade Offers
+                        <i data-lucide="arrow-right"></i>
+                    </button>
                 </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1716471081169-cb8528a395d3" alt="Electronics" class="category-image">
-                    <div class="category-overlay"></div>
-                    <div class="category-content">
-                        <h3>Electronics</h3>
-                        <p>Exchange chargers, devices, and gadgets</p>
+            </div>
+        </section>
+
+        <!-- Trade Value Guide -->
+        <section class="trade-guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fair Trade Guidelines</h2>
+                    <p>Tips for successful exchanges</p>
+                </div>
+                
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <div class="guide-icon">
+                            <i data-lucide="balance-scale"></i>
+                        </div>
+                        <h3>Equal Value Exchange</h3>
+                        <p>Trade items of similar market value. Research prices online to ensure fairness for both parties.</p>
+                        <div class="guide-examples">
+                            <strong>Examples:</strong>
+                            <ul>
+                                <li>$200 textbook ↔ $180 textbook + $20 cash</li>
+                                <li>Laptop ↔ Tablet + Accessories</li>
+                                <li>Designer jacket ↔ Multiple clothing items</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-item">
+                        <div class="guide-icon">
+                            <i data-lucide="eye"></i>
+                        </div>
+                        <h3>Inspect Before Trading</h3>
+                        <p>Always examine items in person before completing a trade. Check functionality and condition.</p>
+                        <div class="guide-checklist">
+                            <strong>Inspection Checklist:</strong>
+                            <ul>
+                                <li>✓ Test electronic devices</li>
+                                <li>✓ Check for hidden damage</li>
+                                <li>✓ Verify all parts included</li>
+                                <li>✓ Confirm item authenticity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-item">
+                        <div class="guide-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Safe Trading Practices</h3>
+                        <p>Meet in public campus locations and trust your instincts about potential trade partners.</p>
+                        <div class="safety-tips">
+                            <strong>Safety Tips:</strong>
+                            <ul>
+                                <li>Meet in busy campus areas</li>
+                                <li>Bring a friend if needed</li>
+                                <li>Use verified student accounts</li>
+                                <li>Document the trade agreement</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Trade Success Stories -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Successful Trade Stories</h2>
+                    <p>Real exchanges from our community</p>
+                </div>
+                
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="trade-icons">
+                            <i data-lucide="book-open"></i>
+                            <i data-lucide="arrow-right"></i>
+                            <i data-lucide="laptop"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>Lisa & Mark</h3>
+                            <p>"Traded my chemistry textbooks for a tablet that Mark wasn't using. Perfect for digital note-taking in my new classes!"</p>
+                            <div class="trade-value">Trade Value: ~$250 each</div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="trade-icons">
+                            <i data-lucide="shirt"></i>
+                            <i data-lucide="arrow-right"></i>
+                            <i data-lucide="shirt"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>David & Sarah</h3>
+                            <p>"I had interview clothes that were too big, Sarah had professional wear too small. We traded and both got perfect-fitting outfits!"</p>
+                            <div class="trade-value">Trade Value: ~$180 each</div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="trade-icons">
+                            <i data-lucide="gamepad-2"></i>
+                            <i data-lucide="arrow-right"></i>
+                            <i data-lucide="dumbbell"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>Mike & Alex</h3>
+                            <p>"Traded my gaming console for Alex's workout equipment. Great way to switch up hobbies without spending money!"</p>
+                            <div class="trade-value">Trade Value: ~$320 each</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading Tips -->
+        <section class="trading-tips">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pro Trading Tips</h2>
+                    <p>Maximize your trading success</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <h3>Timing is Key</h3>
+                        <p>Trade textbooks at semester end, winter gear in spring, and electronics when newer models release.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="package"></i>
+                        </div>
+                        <h3>Bundle for Better Deals</h3>
+                        <p>Combine multiple smaller items to match the value of one larger item you want.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <h3>Build Your Reputation</h3>
+                        <p>Complete trades professionally to build trust and get better offers in the future.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <h3>Communicate Clearly</h3>
+                        <p>Be upfront about condition, include measurements, and respond promptly to trade inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Trading?</h2>
+                    <p>
+                        Join the circular economy on campus. Trade what you have for what you need, and help build a more sustainable community.
+                    </p>
+                    <div class="cta-actions">
+                        <button class="btn-cta-primary">List Your First Trade</button>
+                        <button class="btn-cta-secondary">Browse Trade Offers</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 
     <footer class="footer">
         <div class="container">
